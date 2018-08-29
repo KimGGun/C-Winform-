@@ -1,0 +1,13 @@
+C:\Users\Gun\source\repos\Mr.KimRice\Mr.KimRice\bin\Debug\Mr.KimRice.exe.config
+C:\Users\Gun\source\repos\Mr.KimRice\Mr.KimRice\bin\Debug\Mr.KimRice.exe
+C:\Users\Gun\source\repos\Mr.KimRice\Mr.KimRice\bin\Debug\Mr.KimRice.pdb
+C:\Users\Gun\source\repos\Mr.KimRice\Mr.KimRice\obj\Debug\Mr.KimRice.csprojAssemblyReference.cache
+C:\Users\Gun\source\repos\Mr.KimRice\Mr.KimRice\obj\Debug\Mr.KimRice.Form1.resources
+C:\Users\Gun\source\repos\Mr.KimRice\Mr.KimRice\obj\Debug\Mr.KimRice.Properties.Resources.resources
+C:\Users\Gun\source\repos\Mr.KimRice\Mr.KimRice\obj\Debug\Mr.KimRice.csproj.GenerateResource.cache
+C:\Users\Gun\source\repos\Mr.KimRice\Mr.KimRice\obj\Debug\Mr.KimRice.csproj.CoreCompileInputs.cache
+C:\Users\Gun\source\repos\Mr.KimRice\Mr.KimRice\obj\Debug\Mr.KimRice.exe
+C:\Users\Gun\source\repos\Mr.KimRice\Mr.KimRice\obj\Debug\Mr.KimRice.pdb
+C:\Users\Gun\source\repos\Mr.KimRice\Mr.KimRice\obj\Debug\Mr.KimRice.Form2.resources
+C:\Users\Gun\source\repos\Mr.KimRice\Mr.KimRice\obj\Debug\Mr.KimRice.Form3.resources
+C:\Users\Gun\source\repos\Mr.KimRice\Mr.KimRice\obj\Debug\Mr.KimRice.Form4.resources
