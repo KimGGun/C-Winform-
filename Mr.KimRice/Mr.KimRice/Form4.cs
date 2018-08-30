@@ -17,26 +17,15 @@ namespace Mr.KimRice
         {
             InitializeComponent();
 
-            progress.BringToFront();
-        }
-
-        private void loading(object sender, EventArgs e)
-        {
-            Thread load = new Thread(step);
-            load.Start();
-        }
-
-        private void step()
-        {
-            for(int i = 1; i <= progress.Maximum; i++)
+            progressBar1.Style = ProgressBarStyle.Continuous;
+            while(progressBar1.Value < progressBar1.Maximum)
             {
-                Thread.Sleep(10);
+                progressBar1.PerformStep();
+               
             }
-            Thread.Sleep(3000);
-            Form4 form4 = new Form4();
-            this.Close();
-            form4.Show();
+            
         }
 
+        
     }
 }

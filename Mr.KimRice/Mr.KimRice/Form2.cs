@@ -14,6 +14,7 @@ namespace Mr.KimRice
     {
         public static int t_id;
         public static int order_price = 0;
+        public List<menu> all_food = new List<menu>();
         public Form2()
         {
             InitializeComponent();
@@ -21,10 +22,52 @@ namespace Mr.KimRice
 
         private void Form2_Load(object sender, EventArgs e)
         {
-            menu 불고기김밥 = new menu("불고기김밥", "kimbab", 2999);
-            menu 새싹김밥 = new menu("새싹김밥", "kimbab", 2999);
-            menu 야채김밥 = new menu("야채김밥", "kimbab", 1999);
-            menu 오징어김밥 = new menu("오징어김밥", "kimbab", 3499);
+
+            Foodinit();
+            Set_foodlist();
+
+            
+
+            order_list.View = View.Details;
+
+            order_list.GridLines = true;
+            order_list.FullRowSelect = true;
+
+            order_list.Columns.Add("음식명",230, HorizontalAlignment.Center);
+            order_list.Columns.Add("수량", 75, HorizontalAlignment.Center);
+            order_list.Columns.Add("가격",90, HorizontalAlignment.Center);
+
+
+            // order list Item add
+            ListViewItem newmenu = new ListViewItem("날치롤알");
+            newmenu.SubItems.Add("3");
+            newmenu.SubItems.Add("16497");
+            
+            order_list.Items.Add(newmenu);
+            order_list.Items.Add("12331");
+            order_list.Items.Add("#####");
+            order_list.Items.Add("@!#!#");
+            //
+
+            // 테이블 번호 출력
+            this.label_teble_count.Text = t_id + "번 테이블";
+
+            // 주문시간 출력
+            this.label_order_time.Text = DateTime.Now.ToString("yyyy년 MM월 dd일 hh시 mm분");
+
+            food_list.MaximumSize = new Size(food_list.Width, food_list.Height);
+            food_list.AutoScroll = true;
+           
+            
+            
+        }
+
+        private void Foodinit()
+        {
+            menu 불고기김밥 = new menu("불고기김밥", "kimbab", 2999, "/resource/boolkim.jpg");
+            menu 새싹김밥 = new menu("새싹김밥", "kimbab", 2999, "/resource/saessac.jpg");
+            menu 야채김밥 = new menu("야채김밥", "kimbab", 1999, "/resource/yakim.jpg");
+            /*menu 오징어김밥 = new menu("오징어김밥", "kimbab", 3499);
             menu 날치알롤 = new menu("날치알롤", "kimbab", 5555);
             menu 땡초김밥 = new menu("땡초김밥", "kimbab", 2555);
             menu 짬뽕라면 = new menu("짬뽕라면", "noodle", 3499);
@@ -48,39 +91,52 @@ namespace Mr.KimRice
             menu 황태해장국 = new menu("황태해장국", "meal", 5999);
             menu 오므라이스 = new menu("오므라이스", "meal", 4499);
             menu 육개장 = new menu("육개장", "meal", 4499);
+            */
 
-            order_list.View = View.Details;
+            all_food.Add(불고기김밥);
+            all_food.Add(새싹김밥);
+            all_food.Add(야채김밥);
+            /*all_food.Add(오징어김밥);
+            all_food.Add(날치알롤);
+            all_food.Add(땡초김밥);
+            all_food.Add(짬뽕라면);
+            all_food.Add(떡라면);
+            all_food.Add(만두라면);
+            all_food.Add(우동);
+            all_food.Add(잔치국수);
+            all_food.Add(칼국수);
+            all_food.Add(수제비);
+            all_food.Add(치즈라면);
+            all_food.Add(떡볶이);
+            all_food.Add(라볶이);
+            all_food.Add(만두국);*/
+        }
 
-            order_list.GridLines = true;
-            order_list.FullRowSelect = true;
+        private void Set_foodlist()
+        {
+            try
+            {
+                food_list.AutoScroll = true;
+                for (int i = 0; i < all_food.Count; i++)
+                {
+                    Button thisButton = new Button();
+                    thisButton.Width = 260;
+                    thisButton.Height = 256;
+                    thisButton.BackgroundImage = Image.FromFile
+                                                 (System.Environment.GetFolderPath
+                                                 (System.Environment.SpecialFolder.Personal) + all_food[i].imgpath);
 
-            order_list.Columns.Add("음식명",230, HorizontalAlignment.Center);
-            order_list.Columns.Add("수량", 75, HorizontalAlignment.Center);
-            order_list.Columns.Add("가격",90, HorizontalAlignment.Center);
+                    thisButton.Text = all_food[i].name;
 
-
-            // order list Item add
-            ListViewItem newmenu = new ListViewItem("날치롤알");
-            int ea = 오므라이스.Get_ea();
-            newmenu.SubItems.Add("3");
-            newmenu.SubItems.Add("16497");
-
-            order_list.Items.Add(newmenu);
-            order_list.Items.Add("12331");
-            order_list.Items.Add("#####");
-            order_list.Items.Add("@!#!#");
-            //
-
-            // 테이블 번호 출력
-            this.label_teble_count.Text = t_id + "번 테이블";
-
-            // 주문시간 출력
-            this.label_order_time.Text = DateTime.Now.ToString("yyyy년 MM월 dd일 hh시 mm분");
-
-            food_list.MaximumSize = new Size(food_list.Width, food_list.Height);
-            food_list.AutoScroll = true;
-           
+                    food_list.Controls.Add(thisButton);
+                }
+            } catch(Exception e)
+            {
+                
+            }
             
+
+
             
         }
 

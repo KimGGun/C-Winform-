@@ -93,6 +93,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -107,5 +108,57 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\boolkim.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cheezemen.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\janchimen.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\jjambbongmen.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\manduguk.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mandumen.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nalchirol.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ojingkim.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rabokki.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\saessackim.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\soojebi.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\swardmen.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ttangchokim.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ttukbokki.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ttukmen.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\woodongment.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\yakim.jpg" />
+  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

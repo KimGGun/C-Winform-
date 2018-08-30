@@ -47,7 +47,7 @@
             this.btn_back_toMain = new System.Windows.Forms.Button();
             this.backgroundWorker2 = new System.ComponentModel.BackgroundWorker();
             this.button1 = new System.Windows.Forms.Button();
-            this.food_list = new System.Windows.Forms.TableLayoutPanel();
+            this.food_list = new System.Windows.Forms.FlowLayoutPanel();
             this.SuspendLayout();
             // 
             // label_teble_count
@@ -222,16 +222,8 @@
             // 
             // food_list
             // 
-            this.food_list.ColumnCount = 2;
-            this.food_list.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.food_list.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.food_list.Location = new System.Drawing.Point(514, 33);
             this.food_list.Name = "food_list";
-            this.food_list.RowCount = 4;
-            this.food_list.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.food_list.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.food_list.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.food_list.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.food_list.Size = new System.Drawing.Size(560, 528);
             this.food_list.TabIndex = 18;
             // 
@@ -287,6 +279,6 @@
         private System.Windows.Forms.Button btn_back_toMain;
         private System.ComponentModel.BackgroundWorker backgroundWorker2;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TableLayoutPanel food_list;
+        private System.Windows.Forms.FlowLayoutPanel food_list;
     }
 }
