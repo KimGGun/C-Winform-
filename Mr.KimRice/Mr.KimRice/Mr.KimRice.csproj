@@ -109,55 +109,55 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\boolkim.jpg" />
+    <EmbeddedResource Include="Resources\boolkim.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\cheezemen.jpg" />
+    <EmbeddedResource Include="Resources\cheezemen.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\janchimen.jpg" />
+    <EmbeddedResource Include="Resources\janchimen.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\jjambbongmen.jpg" />
+    <EmbeddedResource Include="Resources\jjambbongmen.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\manduguk.jpg" />
+    <EmbeddedResource Include="Resources\manduguk.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\mandumen.jpg" />
+    <EmbeddedResource Include="Resources\mandumen.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\nalchirol.jpg" />
+    <EmbeddedResource Include="Resources\nalchirol.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\ojingkim.jpg" />
+    <EmbeddedResource Include="Resources\ojingkim.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\rabokki.jpg" />
+    <EmbeddedResource Include="Resources\rabokki.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\saessackim.jpg" />
+    <EmbeddedResource Include="Resources\saessackim.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\soojebi.jpg" />
+    <EmbeddedResource Include="Resources\soojebi.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\swardmen.jpg" />
+    <EmbeddedResource Include="Resources\swardmen.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\ttangchokim.jpg" />
+    <EmbeddedResource Include="Resources\ttangchokim.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\ttukbokki.jpg" />
+    <EmbeddedResource Include="Resources\ttukbokki.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\ttukmen.jpg" />
+    <EmbeddedResource Include="Resources\ttukmen.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\woodongment.jpg" />
+    <EmbeddedResource Include="Resources\woodongment.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\yakim.jpg" />
+    <EmbeddedResource Include="Resources\yakim.jpg" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

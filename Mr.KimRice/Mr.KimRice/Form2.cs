@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Resources;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -64,9 +65,9 @@ namespace Mr.KimRice
 
         private void Foodinit()
         {
-            menu 불고기김밥 = new menu("불고기김밥", "kimbab", 2999, "/resource/boolkim.jpg");
-            menu 새싹김밥 = new menu("새싹김밥", "kimbab", 2999, "/resource/saessac.jpg");
-            menu 야채김밥 = new menu("야채김밥", "kimbab", 1999, "/resource/yakim.jpg");
+            menu 불고기김밥 = new menu("불고기김밥", "kimbab", 2999, "boolkim");
+            menu 새싹김밥 = new menu("새싹김밥", "kimbab", 2999, "soojebi");
+            menu 야채김밥 = new menu("야채김밥", "kimbab", 1999, "rabokki");
             /*menu 오징어김밥 = new menu("오징어김밥", "kimbab", 3499);
             menu 날치알롤 = new menu("날치알롤", "kimbab", 5555);
             menu 땡초김밥 = new menu("땡초김밥", "kimbab", 2555);
@@ -116,29 +117,40 @@ namespace Mr.KimRice
         {
             try
             {
+                ResourceManager rm = Properties.Resources.ResourceManager;
                 food_list.AutoScroll = true;
                 for (int i = 0; i < all_food.Count; i++)
                 {
                     Button thisButton = new Button();
                     thisButton.Width = 260;
                     thisButton.Height = 256;
-                    thisButton.BackgroundImage = Image.FromFile
-                                                 (System.Environment.GetFolderPath
-                                                 (System.Environment.SpecialFolder.Personal) + all_food[i].imgpath);
 
-                    thisButton.Text = all_food[i].name;
+                    Bitmap backImage = (Bitmap)rm.GetObject(all_food[i].imgpath);
+                    backImage = new Bitmap(backImage, new Size(260, 256));
 
+                    thisButton.BackgroundImage = backImage;
+                    thisButton.Text = all_food[i].name+"  "+all_food[i].price+"원";
+                    thisButton.TextAlign = ContentAlignment.BottomLeft;
+                    thisButton.Font = new Font("Serif", 15, FontStyle.Bold);
                     food_list.Controls.Add(thisButton);
                 }
-            } catch(Exception e)
+            }
+            catch (Exception e)
             {
+                Console.WriteLine(e.Message);
                 
             }
-            
-
-
-            
+                
         }
+
+        private Bitmap ResizeBit(Bitmap image)
+        {
+            int width = image.Width;
+            int height = image.Height;
+
+            return image;
+        }
+
 
         private void btn_all_Click(object sender, EventArgs e)
         {
