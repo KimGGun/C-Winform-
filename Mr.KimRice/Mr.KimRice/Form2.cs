@@ -66,8 +66,8 @@ namespace Mr.KimRice
         private void Foodinit()
         {
             menu 불고기김밥 = new menu("불고기김밥", "kimbab", 2999, "boolkim");
-            menu 새싹김밥 = new menu("새싹김밥", "kimbab", 2999, "soojebi");
-            menu 야채김밥 = new menu("야채김밥", "kimbab", 1999, "rabokki");
+            menu 새싹김밥 = new menu("새싹김밥", "kimbab", 2999, "saessackim");
+            menu 야채김밥 = new menu("야채김밥", "kimbab", 1999, "yakim");
             menu 오징어김밥 = new menu("오징어김밥", "kimbab", 3499, "ojingkim");
             menu 날치알롤 = new menu("날치알롤", "kimbab", 5555, "nalchirol");
             menu 땡초김밥 = new menu("땡초김밥", "kimbab", 2555, "ttangchokim");
