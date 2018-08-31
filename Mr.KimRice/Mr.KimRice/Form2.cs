@@ -68,36 +68,34 @@ namespace Mr.KimRice
             menu 불고기김밥 = new menu("불고기김밥", "kimbab", 2999, "boolkim");
             menu 새싹김밥 = new menu("새싹김밥", "kimbab", 2999, "soojebi");
             menu 야채김밥 = new menu("야채김밥", "kimbab", 1999, "rabokki");
-            /*menu 오징어김밥 = new menu("오징어김밥", "kimbab", 3499);
-            menu 날치알롤 = new menu("날치알롤", "kimbab", 5555);
-            menu 땡초김밥 = new menu("땡초김밥", "kimbab", 2555);
-            menu 짬뽕라면 = new menu("짬뽕라면", "noodle", 3499);
-            menu 떡라면 = new menu("떡라면", "noodle", 3499);
-            menu 만두라면 = new menu("만두라면", "noodle", 3999);
-            menu 우동 = new menu("우동", "noodle", 3499);
-            menu 잔치국수 = new menu("잔치국수", "noodle", 3999);
-            menu 칼국수 = new menu("칼국수", "noodle", 4499);
-            menu 수제비 = new menu("수제비", "noodle", 4499);
-            menu 치즈라면 = new menu("치즈라면", "noodle", 3999);
-            menu 떡볶이 = new menu("떡볶이", "bs", 3999);
-            menu 치즈떡볶이 = new menu("치즈떡볶이", "bs", 4999);
-            menu 라볶이 = new menu("라볶이", "bs", 4999);
-            menu 만두국 = new menu("만두국", "bs", 4499);
-            menu 군만두 = new menu("군만두", "bs", 3999);
-            menu 고기만두 = new menu("고기만두", "bs", 4499);
-            menu 비빔밥 = new menu("비빔밥", "meal", 3999);
-            menu 김치덮밥 = new menu("김치덮밥", "meal", 3999);
-            menu 뚝배기불고기 = new menu("뚝배기불고기", "meal", 4999);
-            menu 고등어조림 = new menu("고등어조림", "meal", 5999);
-            menu 황태해장국 = new menu("황태해장국", "meal", 5999);
-            menu 오므라이스 = new menu("오므라이스", "meal", 4499);
-            menu 육개장 = new menu("육개장", "meal", 4499);
-            */
+            menu 오징어김밥 = new menu("오징어김밥", "kimbab", 3499, "ojingkim");
+            menu 날치알롤 = new menu("날치알롤", "kimbab", 5555, "nalchirol");
+            menu 땡초김밥 = new menu("땡초김밥", "kimbab", 2555, "ttangchokim");
+            menu 짬뽕라면 = new menu("짬뽕라면", "noodle", 3499,"jjambbongmen");
+            menu 떡라면 = new menu("떡라면", "noodle", 3499, "ttukbokki");
+            menu 만두라면 = new menu("만두라면", "noodle", 3999, "mandumen");
+            menu 우동 = new menu("우동", "noodle", 3499, "woodongment");
+            menu 잔치국수 = new menu("잔치국수", "noodle", 3999, "janchimen");
+            menu 칼국수 = new menu("칼국수", "noodle", 4499, "swardmen");
+            menu 수제비 = new menu("수제비", "noodle", 4499, "soojebi");
+            menu 치즈라면 = new menu("치즈라면", "noodle", 3999, "cheezemen");
+            menu 떡볶이 = new menu("떡볶이", "bs", 3999, "ttukboki");
+            menu 라볶이 = new menu("라볶이", "bs", 4999, "rabokki");
+            menu 만두국 = new menu("만두국", "bs", 4499, "manduguk");
+            menu 고기만두 = new menu("고기만두", "bs", 4499, "gogimandu");
+            menu 비빔밥 = new menu("비빔밥", "meal", 3999, "bibimbab");
+            menu 김치덮밥 = new menu("김치덮밥", "meal", 3999, "kimchibab");
+            menu 뚝배기불고기 = new menu("뚝배기불고기", "meal", 4999, "ttucbool");
+            menu 고등어조림 = new menu("고등어조림", "meal", 5999, "highjorim");
+            menu 황태해장국 = new menu("황태해장국", "meal", 5999, "hwangtaehae");
+            menu 오므라이스 = new menu("오므라이스", "meal", 4499, "omrice");
+            menu 육개장 = new menu("육개장", "meal", 4499, "sixjang");
+            
 
             all_food.Add(불고기김밥);
             all_food.Add(새싹김밥);
             all_food.Add(야채김밥);
-            /*all_food.Add(오징어김밥);
+            all_food.Add(오징어김밥);
             all_food.Add(날치알롤);
             all_food.Add(땡초김밥);
             all_food.Add(짬뽕라면);
@@ -110,7 +108,7 @@ namespace Mr.KimRice
             all_food.Add(치즈라면);
             all_food.Add(떡볶이);
             all_food.Add(라볶이);
-            all_food.Add(만두국);*/
+            all_food.Add(만두국);
         }
 
         private void Set_foodlist()

@@ -63,6 +63,16 @@ namespace Mr.KimRice.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
         /// </summary>
+        internal static System.Drawing.Bitmap bibimbab {
+            get {
+                object obj = ResourceManager.GetObject("bibimbab", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
+        /// </summary>
         internal static System.Drawing.Bitmap boolkim {
             get {
                 object obj = ResourceManager.GetObject("boolkim", resourceCulture);
@@ -83,6 +93,36 @@ namespace Mr.KimRice.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
         /// </summary>
+        internal static System.Drawing.Bitmap gogimandu {
+            get {
+                object obj = ResourceManager.GetObject("gogimandu", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
+        /// </summary>
+        internal static System.Drawing.Bitmap highjorim {
+            get {
+                object obj = ResourceManager.GetObject("highjorim", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
+        /// </summary>
+        internal static System.Drawing.Bitmap hwangtaehae {
+            get {
+                object obj = ResourceManager.GetObject("hwangtaehae", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
+        /// </summary>
         internal static System.Drawing.Bitmap janchimen {
             get {
                 object obj = ResourceManager.GetObject("janchimen", resourceCulture);
@@ -96,6 +136,16 @@ namespace Mr.KimRice.Properties {
         internal static System.Drawing.Bitmap jjambbongmen {
             get {
                 object obj = ResourceManager.GetObject("jjambbongmen", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
+        /// </summary>
+        internal static System.Drawing.Bitmap kimchibab {
+            get {
+                object obj = ResourceManager.GetObject("kimchibab", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -143,6 +193,16 @@ namespace Mr.KimRice.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
         /// </summary>
+        internal static System.Drawing.Bitmap omrice {
+            get {
+                object obj = ResourceManager.GetObject("omrice", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
+        /// </summary>
         internal static System.Drawing.Bitmap rabokki {
             get {
                 object obj = ResourceManager.GetObject("rabokki", resourceCulture);
@@ -156,6 +216,16 @@ namespace Mr.KimRice.Properties {
         internal static System.Drawing.Bitmap saessackim {
             get {
                 object obj = ResourceManager.GetObject("saessackim", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
+        /// </summary>
+        internal static System.Drawing.Bitmap sixjang {
+            get {
+                object obj = ResourceManager.GetObject("sixjang", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -186,6 +256,16 @@ namespace Mr.KimRice.Properties {
         internal static System.Drawing.Bitmap ttangchokim {
             get {
                 object obj = ResourceManager.GetObject("ttangchokim", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
+        /// </summary>
+        internal static System.Drawing.Bitmap ttucbool {
+            get {
+                object obj = ResourceManager.GetObject("ttucbool", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

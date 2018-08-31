@@ -159,6 +159,29 @@
   <ItemGroup>
     <EmbeddedResource Include="Resources\yakim.jpg" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\bibimbab.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gogimandu.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\highjorim.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hwangtaehae.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kimchibab.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\omrice.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sixjang.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ttucbool.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
