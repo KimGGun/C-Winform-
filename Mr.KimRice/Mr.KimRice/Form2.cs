@@ -13,9 +13,12 @@ namespace Mr.KimRice
 {
     public partial class Form2 : Form
     {
-        public static int t_id;
-        public static int order_price = 0;
+        public int t_id;
+        public int order_price = 0;
+        public int menu_int;
+
         public List<menu> all_food = new List<menu>();
+
         public Form2()
         {
             InitializeComponent();
@@ -26,21 +29,10 @@ namespace Mr.KimRice
 
             Foodinit();
             Set_foodlist();
-
+            Set_orderlist();
             
-
-            order_list.View = View.Details;
-
-            order_list.GridLines = true;
-            order_list.FullRowSelect = true;
-
-            order_list.Columns.Add("음식명",230, HorizontalAlignment.Center);
-            order_list.Columns.Add("수량", 75, HorizontalAlignment.Center);
-            order_list.Columns.Add("가격",90, HorizontalAlignment.Center);
-
-
             // order list Item add
-            ListViewItem newmenu = new ListViewItem("날치롤알");
+            /*ListViewItem newmenu = new ListViewItem("날치롤알");
             newmenu.SubItems.Add("3");
             newmenu.SubItems.Add("16497");
             
@@ -48,7 +40,7 @@ namespace Mr.KimRice
             order_list.Items.Add("12331");
             order_list.Items.Add("#####");
             order_list.Items.Add("@!#!#");
-            //
+            //*/
 
             // 테이블 번호 출력
             this.label_teble_count.Text = t_id + "번 테이블";
@@ -61,6 +53,16 @@ namespace Mr.KimRice
            
             
             
+        }
+
+        private void Set_orderlist()
+        {
+            order_list.View = View.Details;
+            order_list.GridLines = true;
+            order_list.FullRowSelect = true;
+            order_list.Columns.Add("음식명", 230, HorizontalAlignment.Center);
+            order_list.Columns.Add("수량", 75, HorizontalAlignment.Center);
+            order_list.Columns.Add("가격", 90, HorizontalAlignment.Center);
         }
 
         private void Foodinit()
@@ -117,19 +119,23 @@ namespace Mr.KimRice
             {
                 ResourceManager rm = Properties.Resources.ResourceManager;
                 food_list.AutoScroll = true;
-                for (int i = 0; i < all_food.Count; i++)
+                int buttonWidth = 260;
+                int buttonHeight = 256;
+                for (int i = 1; i < all_food.Count; i++)
                 {
                     Button thisButton = new Button();
-                    thisButton.Width = 260;
-                    thisButton.Height = 256;
+                    thisButton.Width = buttonWidth;
+                    thisButton.Height = buttonHeight;
+                    thisButton.Click += menu_click;
 
                     Bitmap backImage = (Bitmap)rm.GetObject(all_food[i].imgpath);
                     backImage = new Bitmap(backImage, new Size(260, 256));
-
                     thisButton.BackgroundImage = backImage;
+
                     thisButton.Text = all_food[i].name+"  "+all_food[i].price+"원";
                     thisButton.TextAlign = ContentAlignment.BottomLeft;
-                    thisButton.Font = new Font("Serif", 15, FontStyle.Bold);
+                    thisButton.Font = new Font("Serif", 16, FontStyle.Bold);
+
                     food_list.Controls.Add(thisButton);
                 }
             }
@@ -141,6 +147,7 @@ namespace Mr.KimRice
                 
         }
 
+        // 이미지 크기를 버튼 크기에 맞추기
         private Bitmap ResizeBit(Bitmap image)
         {
             int width = image.Width;
@@ -152,7 +159,7 @@ namespace Mr.KimRice
 
         private void btn_all_Click(object sender, EventArgs e)
         {
-
+            
         }
 
         private void btn_order_Click(object sender, EventArgs e)
@@ -201,6 +208,38 @@ namespace Mr.KimRice
             this.Hide();
             Form1 form1 = new Form1();
             form1.Show();
+        }
+
+        private void menu_click(object sender, EventArgs e)
+        {
+            int i = menu_int;
+            add_order(all_food[i].name, all_food[i].ea, all_food[i].price);
+        }
+
+        private void add_order(String name, int ea, int price)
+        {
+            ListViewItem newOrder = new ListViewItem(name);
+            for(int i = 0; i < order_list.Items.Count; i++)
+            {
+                if(order_list.Items[i].Text == name)
+                {
+                    int new_ea = Int32.Parse(order_list.Items[i].SubItems[1].Text);
+                    int new_price = Int32.Parse(order_list.Items[i].SubItems[2].Text);
+                    new_ea += 1;
+                    new_price = new_ea * new_price;
+
+                    order_list.Items[i].SubItems[1].Text = new_ea.ToString("G");
+                    order_list.Items[i].SubItems[2].Text = new_price.ToString("g");
+
+                    return;
+                }
+            }
+
+            newOrder.SubItems.Add(ea.ToString("G"));
+            newOrder.SubItems.Add(price.ToString("G"));
+
+            order_list.Items.Add(newOrder);
+
         }
 
 

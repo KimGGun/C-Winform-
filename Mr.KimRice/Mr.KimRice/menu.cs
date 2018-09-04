@@ -14,7 +14,7 @@ namespace Mr.KimRice
             this.kind = kind;
             this.price = price;
             this.imgpath = imgpath;
-            ea = 0;
+            ea = 1;
         }
 
         
