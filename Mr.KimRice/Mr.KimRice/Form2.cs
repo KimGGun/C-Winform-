@@ -14,7 +14,7 @@ namespace Mr.KimRice
     public partial class Form2 : Form
     {
         public int t_id;
-        public int order_price = 0;
+        public int order_price;
         public int menu_int;
 
         public List<menu> all_food = new List<menu>();
@@ -27,9 +27,10 @@ namespace Mr.KimRice
         private void Form2_Load(object sender, EventArgs e)
         {
 
-            Foodinit();
+            Food_init();
             Set_foodlist();
             Set_orderlist();
+            Set_orderPrice();
             
             // order list Item add
             /*ListViewItem newmenu = new ListViewItem("날치롤알");
@@ -55,6 +56,23 @@ namespace Mr.KimRice
             
         }
 
+        private void Set_orderPrice()
+        {
+            if(order_list.Items.Count == 0)
+            {
+                text_order_price.Text += 0;
+            } else
+            {
+                for(int i = 0; i < order_list.Items.Count; i++)
+                {
+                    order_price += Int32.Parse(order_list.Items[i].SubItems[2].Text);
+                }
+                text_order_price.Text = "전체 금액 : "; 
+                text_order_price.Text += order_price;
+                order_price = 0;
+            }
+        }
+
         private void Set_orderlist()
         {
             order_list.View = View.Details;
@@ -65,7 +83,7 @@ namespace Mr.KimRice
             order_list.Columns.Add("가격", 90, HorizontalAlignment.Center);
         }
 
-        private void Foodinit()
+        private void Food_init()
         {
             menu 불고기김밥 = new menu("불고기김밥", "kimbab", 2999, "boolkim");
             menu 새싹김밥 = new menu("새싹김밥", "kimbab", 2999, "saessackim");
@@ -121,13 +139,15 @@ namespace Mr.KimRice
                 food_list.AutoScroll = true;
                 int buttonWidth = 260;
                 int buttonHeight = 256;
-                for (int i = 1; i < all_food.Count; i++)
+                for (int i = 0; i < all_food.Count+1; i++)
                 {
-                    Button thisButton = new Button();
-                    thisButton.Width = buttonWidth;
-                    thisButton.Height = buttonHeight;
+                    Button thisButton = new Button
+                    {
+                        Width = buttonWidth,
+                        Height = buttonHeight
+                    };
                     thisButton.Click += menu_click;
-
+                    menu_int = i;
                     Bitmap backImage = (Bitmap)rm.GetObject(all_food[i].imgpath);
                     backImage = new Bitmap(backImage, new Size(260, 256));
                     thisButton.BackgroundImage = backImage;
@@ -167,10 +187,7 @@ namespace Mr.KimRice
 
         }
 
-        private void btn_cancel_Click(object sender, EventArgs e)
-        {
-
-        }
+      
 
         private void btn_all_cancel_Click(object sender, EventArgs e)
         {
@@ -178,11 +195,6 @@ namespace Mr.KimRice
         }
 
         private void btn_plus_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btn_minus_Click(object sender, EventArgs e)
         {
 
         }
@@ -214,6 +226,7 @@ namespace Mr.KimRice
         {
             int i = menu_int;
             add_order(all_food[i].name, all_food[i].ea, all_food[i].price);
+            Set_orderPrice();
         }
 
         private void add_order(String name, int ea, int price)
@@ -225,11 +238,12 @@ namespace Mr.KimRice
                 {
                     int new_ea = Int32.Parse(order_list.Items[i].SubItems[1].Text);
                     int new_price = Int32.Parse(order_list.Items[i].SubItems[2].Text);
+
                     new_ea += 1;
                     new_price = new_ea * new_price;
 
                     order_list.Items[i].SubItems[1].Text = new_ea.ToString("G");
-                    order_list.Items[i].SubItems[2].Text = new_price.ToString("g");
+                    order_list.Items[i].SubItems[2].Text = new_price.ToString("G");
 
                     return;
                 }
@@ -244,7 +258,7 @@ namespace Mr.KimRice
 
 
         // 주문 취소 버튼
-        private void btn_cancel_Click_1(object sender, EventArgs e)
+        private void btn_cancel_Click(object sender, EventArgs e)
         {
             var item_idx = order_list.SelectedIndices;
 
@@ -271,5 +285,7 @@ namespace Mr.KimRice
         {
 
         }
+
+        
     }
 }

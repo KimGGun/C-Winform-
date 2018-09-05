@@ -37,7 +37,7 @@
             this.btn_all_cancel = new System.Windows.Forms.Button();
             this.btn_plus = new System.Windows.Forms.Button();
             this.btn_minus = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
+            this.text_order_price = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btn_all = new System.Windows.Forms.Button();
             this.btn_kimbab = new System.Windows.Forms.Button();
@@ -97,7 +97,7 @@
             this.btn_cancel.TabIndex = 4;
             this.btn_cancel.Text = "취소";
             this.btn_cancel.UseVisualStyleBackColor = true;
-            this.btn_cancel.Click += new System.EventHandler(this.btn_cancel_Click_1);
+            this.btn_cancel.Click += new System.EventHandler(this.btn_cancel_Click);
             // 
             // btn_all_cancel
             // 
@@ -129,16 +129,17 @@
             this.btn_minus.TabIndex = 7;
             this.btn_minus.Text = "-";
             this.btn_minus.UseVisualStyleBackColor = true;
+            
             // 
-            // label3
+            // text_order_price
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("나눔스퀘어 Bold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label3.Location = new System.Drawing.Point(290, 375);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(100, 21);
-            this.label3.TabIndex = 8;
-            this.label3.Text = "전체 금액 : ";
+            this.text_order_price.AutoSize = true;
+            this.text_order_price.Font = new System.Drawing.Font("나눔스퀘어 Bold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.text_order_price.Location = new System.Drawing.Point(290, 375);
+            this.text_order_price.Name = "text_order_price";
+            this.text_order_price.Size = new System.Drawing.Size(100, 21);
+            this.text_order_price.TabIndex = 8;
+            this.text_order_price.Text = "전체 금액 : ";
             // 
             // panel1
             // 
@@ -157,7 +158,7 @@
             this.btn_all.TabIndex = 10;
             this.btn_all.Text = "전체";
             this.btn_all.UseVisualStyleBackColor = true;
-            this.btn_all.Click += new System.EventHandler(this.btn_all_Click);
+           
             // 
             // btn_kimbab
             // 
@@ -241,7 +242,7 @@
             this.Controls.Add(this.btn_kimbab);
             this.Controls.Add(this.btn_all);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.text_order_price);
             this.Controls.Add(this.btn_minus);
             this.Controls.Add(this.btn_plus);
             this.Controls.Add(this.btn_all_cancel);
@@ -269,7 +270,7 @@
         private System.Windows.Forms.Button btn_all_cancel;
         private System.Windows.Forms.Button btn_plus;
         private System.Windows.Forms.Button btn_minus;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label text_order_price;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btn_all;
         private System.Windows.Forms.Button btn_kimbab;
