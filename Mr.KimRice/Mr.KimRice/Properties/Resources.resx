@@ -118,23 +118,32 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="nalchirol" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\nalchirol.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="kimchibab" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\kimchibab.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="bibimbab" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bibimbab.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="saessackim" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\saessackim.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="rabokki" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\rabokki.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="cheezemen" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cheezemen.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="yakim" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\yakim.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="soojebi" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\soojebi.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="hwangtaehae" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\hwangtaehae.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="gogimandu" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\gogimandu.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="ttukbokki" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ttukbokki.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="ttangchokim" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ttangchokim.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="woodongment" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\woodongment.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="mandumen" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\mandumen.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -145,14 +154,23 @@
   <data name="jjambbongmen" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\jjambbongmen.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="swardmen" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\swardmen.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="manduguk" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\manduguk.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="cheezemen" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\cheezemen.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="ttangchokim" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ttangchokim.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="woodongment" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\woodongment.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="progress_back" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\progress_back.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="omrice" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\omrice.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="highjorim" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\highjorim.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="ttukmen" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ttukmen.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -160,37 +178,25 @@
   <data name="boolkim" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\boolkim.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="swardmen" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\swardmen.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="nalchirol" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\nalchirol.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="soojebi" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\soojebi.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="ttucbool" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ttucbool.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="janchimen" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\janchimen.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="yakim" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\yakim.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="bibimbab" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\bibimbab.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="gogimandu" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\gogimandu.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="highjorim" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\highjorim.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="hwangtaehae" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\hwangtaehae.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="kimchibab" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\kimchibab.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="omrice" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\omrice.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="rabokki" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\rabokki.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="sixjang" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\sixjang.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="ttucbool" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ttucbool.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="janchimen" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\janchimen.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="progress" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\progress.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

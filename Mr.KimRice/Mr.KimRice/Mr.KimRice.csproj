@@ -183,5 +183,11 @@
   <ItemGroup>
     <None Include="Resources\ttucbool.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\progress_back.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\progress.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

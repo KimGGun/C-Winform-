@@ -119,6 +119,7 @@
             this.btn_plus.TabIndex = 6;
             this.btn_plus.Text = "+";
             this.btn_plus.UseVisualStyleBackColor = true;
+            this.btn_plus.Click += new System.EventHandler(this.btn_plus_Click);
             // 
             // btn_minus
             // 
@@ -129,7 +130,7 @@
             this.btn_minus.TabIndex = 7;
             this.btn_minus.Text = "-";
             this.btn_minus.UseVisualStyleBackColor = true;
-            
+            this.btn_minus.Click += new System.EventHandler(this.btn_minus_Click);
             // 
             // text_order_price
             // 
@@ -158,7 +159,7 @@
             this.btn_all.TabIndex = 10;
             this.btn_all.Text = "전체";
             this.btn_all.UseVisualStyleBackColor = true;
-           
+            this.btn_all.Click += new System.EventHandler(this.btn_all_Click);
             // 
             // btn_kimbab
             // 
@@ -169,6 +170,7 @@
             this.btn_kimbab.TabIndex = 11;
             this.btn_kimbab.Text = "김밥";
             this.btn_kimbab.UseVisualStyleBackColor = true;
+            this.btn_kimbab.Click += new System.EventHandler(this.btn_kimbab_Click);
             // 
             // btn_bs
             // 

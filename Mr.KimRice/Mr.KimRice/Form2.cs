@@ -176,45 +176,6 @@ namespace Mr.KimRice
             return image;
         }
 
-
-        private void btn_all_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void btn_order_Click(object sender, EventArgs e)
-        {
-
-        }
-
-      
-
-        private void btn_all_cancel_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btn_plus_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btn_kimbab_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btn_bs_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btn_noodle_Click(object sender, EventArgs e)
-        {
-
-        }
-
-
         private void btn_back_toMain_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -240,7 +201,7 @@ namespace Mr.KimRice
                     int new_price = Int32.Parse(order_list.Items[i].SubItems[2].Text);
 
                     new_ea += 1;
-                    new_price = new_ea * new_price;
+                    new_price = new_ea * all_food[i].price;
 
                     order_list.Items[i].SubItems[1].Text = new_ea.ToString("G");
                     order_list.Items[i].SubItems[2].Text = new_price.ToString("G");
@@ -286,6 +247,61 @@ namespace Mr.KimRice
 
         }
 
-        
+        private void btn_plus_Click(object sender, EventArgs e)
+        {
+            var selected_idx = order_list.SelectedIndices;
+            for(int i = selected_idx.Count - 1; i >= 0 ; i--)
+            {
+                int new_ea = Int32.Parse(order_list.Items[i].SubItems[1].Text);
+                int now_price = Int32.Parse(order_list.Items[i].SubItems[2].Text);
+                int ori_price = now_price / new_ea;
+                int new_price;
+                new_ea++;
+                new_price = new_ea * ori_price;
+
+                order_list.Items[i].SubItems[1].Text = new_ea.ToString("G");
+                order_list.Items[i].SubItems[2].Text = new_price.ToString("G");
+
+                Set_orderPrice();
+            }
+        }
+
+        private void btn_minus_Click(object sender, EventArgs e)
+        {
+            var selected_idx = order_list.SelectedIndices;
+            for (int i = selected_idx.Count - 1; i >= 0; i--)
+            {
+                int new_ea = Int32.Parse(order_list.Items[i].SubItems[1].Text);
+                int now_price = Int32.Parse(order_list.Items[i].SubItems[2].Text);
+                int ori_price = now_price / new_ea;
+                int new_price;
+                new_ea--;
+                new_price = new_ea * ori_price;
+
+                order_list.Items[i].SubItems[1].Text = new_ea.ToString("G");
+                order_list.Items[i].SubItems[2].Text = new_price.ToString("G");
+
+                Set_orderPrice();
+            }
+        }
+
+        private void btn_all_Click(object sender, EventArgs e)
+        {
+            
+            Set_foodlist();
+        }
+
+        private void Reset_foodlist()
+        {
+            for(int i = food_list.Controls.Count - 1; i >= 0; i--)
+            {
+                food_list.Controls.RemoveAt(i);
+            }
+        }
+
+        private void btn_kimbab_Click(object sender, EventArgs e)
+        {
+            Reset_foodlist();
+        }
     }
 }
