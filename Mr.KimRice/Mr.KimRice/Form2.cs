@@ -139,7 +139,7 @@ namespace Mr.KimRice
                 food_list.AutoScroll = true;
                 int buttonWidth = 260;
                 int buttonHeight = 256;
-                for (int i = 0; i < all_food.Count+1; i++)
+                for (int i = 0; i < all_food.Count; i++)
                 {
                     Button thisButton = new Button
                     {
@@ -185,17 +185,57 @@ namespace Mr.KimRice
 
         private void menu_click(object sender, EventArgs e)
         {
-            int i = menu_int;
-            add_order(all_food[i].name, all_food[i].ea, all_food[i].price);
+            Button btn = sender as Button;
+            int index = 0;
+            String menu_name = btn.Text;
+          
+            for(int i =  0; i < all_food.Count; i++)
+            {
+                if (all_food[i].name.Contains(menu_name))
+                {
+                    index = i;
+                }
+            }
+
+            menu_name = null;
+
+            add_order(index);
             Set_orderPrice();
         }
 
-        private void add_order(String name, int ea, int price)
+        private void add_order(int index)
         {
-            ListViewItem newOrder = new ListViewItem(name);
+            ListViewItem newOrder = new ListViewItem(all_food[index].name);
             for(int i = 0; i < order_list.Items.Count; i++)
             {
-                if(order_list.Items[i].Text == name)
+                if(order_list.Items[i].Text == all_food[index].name)
+                {
+                    int new_ea = Int32.Parse(order_list.Items[i].SubItems[1].Text);
+                    int new_price = Int32.Parse(order_list.Items[i].SubItems[2].Text);
+
+                    new_ea += 1;
+                    new_price = new_ea * all_food[i].price;
+
+                    order_list.Items[i].SubItems[1].Text = new_ea.ToString("G");
+                    order_list.Items[i].SubItems[2].Text = new_price.ToString("G");
+
+                    return;
+                }
+            }
+
+            newOrder.SubItems.Add(all_food[index].ea.ToString("G"));
+            newOrder.SubItems.Add(all_food[index].price.ToString("G"));
+
+            order_list.Items.Add(newOrder);
+
+        }
+
+        /*private void add_order(String name, int ea, int price)
+        {
+            ListViewItem newOrder = new ListViewItem(name);
+            for (int i = 0; i < order_list.Items.Count; i++)
+            {
+                if (order_list.Items[i].Text == name)
                 {
                     int new_ea = Int32.Parse(order_list.Items[i].SubItems[1].Text);
                     int new_price = Int32.Parse(order_list.Items[i].SubItems[2].Text);
@@ -215,7 +255,7 @@ namespace Mr.KimRice
 
             order_list.Items.Add(newOrder);
 
-        }
+        }*/
 
 
         // 주문 취소 버튼
@@ -271,8 +311,14 @@ namespace Mr.KimRice
             var selected_idx = order_list.SelectedIndices;
             for (int i = selected_idx.Count - 1; i >= 0; i--)
             {
+                
                 int new_ea = Int32.Parse(order_list.Items[i].SubItems[1].Text);
                 int now_price = Int32.Parse(order_list.Items[i].SubItems[2].Text);
+                if(new_ea == 1)
+                {
+                    order_list.Items[i].Remove();
+                    return;
+                }
                 int ori_price = now_price / new_ea;
                 int new_price;
                 new_ea--;
