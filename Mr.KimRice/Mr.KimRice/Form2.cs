@@ -16,6 +16,7 @@ namespace Mr.KimRice
         public int t_id;
         public int order_price;
         public int menu_int;
+        public int[] food_arr = new int[100];
 
         public List<menu> all_food = new List<menu>();
 
@@ -28,7 +29,7 @@ namespace Mr.KimRice
         {
 
             Food_init();
-            Set_foodlist();
+            Set_foodlist(food_arr);
             Set_orderlist();
             Set_orderPrice();
             
@@ -129,9 +130,14 @@ namespace Mr.KimRice
             all_food.Add(떡볶이);
             all_food.Add(라볶이);
             all_food.Add(만두국);
+
+            for(int i = 0; i <  all_food.Count; i++)
+            {
+                food_arr[i] = i;
+            }
         }
 
-        private void Set_foodlist()
+        private void Set_foodlist(int[] arr)
         {
             try
             {
@@ -139,20 +145,21 @@ namespace Mr.KimRice
                 food_list.AutoScroll = true;
                 int buttonWidth = 260;
                 int buttonHeight = 256;
-                for (int i = 0; i < all_food.Count; i++)
+                for (int i = 0; i < (arr.Length) / 4; i++)
                 {
+                    int index = arr[i];
                     Button thisButton = new Button
                     {
                         Width = buttonWidth,
                         Height = buttonHeight
                     };
                     thisButton.Click += menu_click;
-                    menu_int = i;
-                    Bitmap backImage = (Bitmap)rm.GetObject(all_food[i].imgpath);
+                    menu_int = index;
+                    Bitmap backImage = (Bitmap)rm.GetObject(all_food[index].imgpath);
                     backImage = new Bitmap(backImage, new Size(260, 256));
                     thisButton.BackgroundImage = backImage;
 
-                    thisButton.Text = all_food[i].name+"  "+all_food[i].price+"원";
+                    thisButton.Text = all_food[index].name+"  "+all_food[index].price+"원";
                     thisButton.TextAlign = ContentAlignment.BottomLeft;
                     thisButton.Font = new Font("Serif", 16, FontStyle.Bold);
 
@@ -334,7 +341,7 @@ namespace Mr.KimRice
         private void btn_all_Click(object sender, EventArgs e)
         {
             
-            Set_foodlist();
+            Set_foodlist(food_arr);
         }
 
         private void Reset_foodlist()
@@ -348,6 +355,22 @@ namespace Mr.KimRice
         private void btn_kimbab_Click(object sender, EventArgs e)
         {
             Reset_foodlist();
+        }
+
+        private void remake_list(String kind)
+        {
+            int index = 0;
+            for(int i = 0; i < all_food.Count; i++)
+            {
+                if (all_food[i].kind.Equals(kind)) {
+                    food_arr[index] = i;
+                    index++;
+                } 
+            }
+
+            Reset_foodlist();
+            Set_foodlist(food_arr);
+
         }
     }
 }

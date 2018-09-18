@@ -20,12 +20,12 @@ namespace Mr.KimRice
 
         private void Table_Set()
         {
-            for(int i = 0; i  < 5; i++)
+            for(int i = 0; i  < 10; i++)
             {
                 Button newbtn = new Button();
                 newbtn.Text = "[" + i + "]";
-                newbtn.Width = 200;
-                newbtn.Height = 200;
+                newbtn.Width = 180;
+                newbtn.Height = 180;
                 newbtn.Click += Button_Click;
 
                 table_list1.Controls.Add(newbtn);

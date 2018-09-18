@@ -31,7 +31,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.table_list1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.table_list2 = new System.Windows.Forms.FlowLayoutPanel();
             this.SuspendLayout();
             // 
             // label2
@@ -59,22 +58,14 @@
             // 
             this.table_list1.Location = new System.Drawing.Point(17, 52);
             this.table_list1.Name = "table_list1";
-            this.table_list1.Size = new System.Drawing.Size(957, 154);
+            this.table_list1.Size = new System.Drawing.Size(950, 499);
             this.table_list1.TabIndex = 2;
-            // 
-            // table_list2
-            // 
-            this.table_list2.Location = new System.Drawing.Point(17, 397);
-            this.table_list2.Name = "table_list2";
-            this.table_list2.Size = new System.Drawing.Size(957, 154);
-            this.table_list2.TabIndex = 3;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(986, 563);
-            this.Controls.Add(this.table_list2);
             this.Controls.Add(this.table_list1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -90,7 +81,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.FlowLayoutPanel table_list1;
-        private System.Windows.Forms.FlowLayoutPanel table_list2;
     }
 }
 

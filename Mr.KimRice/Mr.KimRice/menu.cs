@@ -24,6 +24,5 @@ namespace Mr.KimRice
         public String kind;
         public String imgpath;
 
-        
     }
 }
