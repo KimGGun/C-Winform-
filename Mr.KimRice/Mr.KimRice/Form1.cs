@@ -23,7 +23,7 @@ namespace Mr.KimRice
             for(int i = 0; i  < 10; i++)
             {
                 Button newbtn = new Button();
-                newbtn.Text = "[" + i + "]";
+                newbtn.Text = i.ToString("G") ;
                 newbtn.Width = 180;
                 newbtn.Height = 180;
                 newbtn.Click += Button_Click;
@@ -39,7 +39,10 @@ namespace Mr.KimRice
 
         private void Button_Click(object sender, EventArgs e) 
         {
+            Button table_count = sender as Button;
+            int new_t_id = Int32.Parse(table_count.Text);
             Form2 newForm2 = new Form2();
+            newForm2.t_id = new_t_id;
             this.Hide();
             newForm2.Show();
         }

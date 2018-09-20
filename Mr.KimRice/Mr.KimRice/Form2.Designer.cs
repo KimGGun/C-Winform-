@@ -38,7 +38,7 @@
             this.btn_plus = new System.Windows.Forms.Button();
             this.btn_minus = new System.Windows.Forms.Button();
             this.text_order_price = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.ex_image = new System.Windows.Forms.Panel();
             this.btn_all = new System.Windows.Forms.Button();
             this.btn_kimbab = new System.Windows.Forms.Button();
             this.btn_bs = new System.Windows.Forms.Button();
@@ -54,6 +54,7 @@
             // 
             this.label_teble_count.AutoSize = true;
             this.label_teble_count.Font = new System.Drawing.Font("나눔스퀘어 Bold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label_teble_count.ForeColor = System.Drawing.SystemColors.Control;
             this.label_teble_count.Location = new System.Drawing.Point(19, 7);
             this.label_teble_count.Name = "label_teble_count";
             this.label_teble_count.Size = new System.Drawing.Size(99, 21);
@@ -64,6 +65,7 @@
             // 
             this.label_order_time.AutoSize = true;
             this.label_order_time.Font = new System.Drawing.Font("나눔스퀘어 Bold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label_order_time.ForeColor = System.Drawing.SystemColors.Control;
             this.label_order_time.Location = new System.Drawing.Point(218, 7);
             this.label_order_time.Name = "label_order_time";
             this.label_order_time.Size = new System.Drawing.Size(100, 21);
@@ -72,6 +74,9 @@
             // 
             // order_list
             // 
+            this.order_list.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.order_list.Font = new System.Drawing.Font("나눔스퀘어", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.order_list.ForeColor = System.Drawing.SystemColors.Window;
             this.order_list.Location = new System.Drawing.Point(16, 33);
             this.order_list.Name = "order_list";
             this.order_list.Size = new System.Drawing.Size(394, 288);
@@ -136,19 +141,20 @@
             // 
             this.text_order_price.AutoSize = true;
             this.text_order_price.Font = new System.Drawing.Font("나눔스퀘어 Bold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.text_order_price.ForeColor = System.Drawing.SystemColors.Control;
             this.text_order_price.Location = new System.Drawing.Point(290, 375);
             this.text_order_price.Name = "text_order_price";
             this.text_order_price.Size = new System.Drawing.Size(100, 21);
             this.text_order_price.TabIndex = 8;
             this.text_order_price.Text = "전체 금액 : ";
             // 
-            // panel1
+            // ex_image
             // 
-            this.panel1.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.panel1.Location = new System.Drawing.Point(16, 414);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(490, 235);
-            this.panel1.TabIndex = 9;
+            this.ex_image.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.ex_image.Location = new System.Drawing.Point(16, 414);
+            this.ex_image.Name = "ex_image";
+            this.ex_image.Size = new System.Drawing.Size(490, 235);
+            this.ex_image.TabIndex = 9;
             // 
             // btn_all
             // 
@@ -163,13 +169,14 @@
             // 
             // btn_kimbab
             // 
+            this.btn_kimbab.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btn_kimbab.Font = new System.Drawing.Font("나눔스퀘어 Bold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btn_kimbab.Location = new System.Drawing.Point(416, 101);
             this.btn_kimbab.Name = "btn_kimbab";
             this.btn_kimbab.Size = new System.Drawing.Size(90, 62);
             this.btn_kimbab.TabIndex = 11;
             this.btn_kimbab.Text = "김밥";
-            this.btn_kimbab.UseVisualStyleBackColor = true;
+            this.btn_kimbab.UseVisualStyleBackColor = false;
             this.btn_kimbab.Click += new System.EventHandler(this.btn_kimbab_Click);
             // 
             // btn_bs
@@ -181,6 +188,7 @@
             this.btn_bs.TabIndex = 12;
             this.btn_bs.Text = "분식";
             this.btn_bs.UseVisualStyleBackColor = true;
+            this.btn_bs.Click += new System.EventHandler(this.btn_bs_Click);
             // 
             // btn_meal
             // 
@@ -191,6 +199,7 @@
             this.btn_meal.TabIndex = 13;
             this.btn_meal.Text = "식사류";
             this.btn_meal.UseVisualStyleBackColor = true;
+            this.btn_meal.Click += new System.EventHandler(this.btn_meal_Click);
             // 
             // btn_noodle
             // 
@@ -201,6 +210,7 @@
             this.btn_noodle.TabIndex = 14;
             this.btn_noodle.Text = "면류";
             this.btn_noodle.UseVisualStyleBackColor = true;
+            this.btn_noodle.Click += new System.EventHandler(this.btn_noodle_Click);
             // 
             // btn_back_toMain
             // 
@@ -234,6 +244,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(1084, 661);
             this.Controls.Add(this.food_list);
             this.Controls.Add(this.button1);
@@ -243,7 +254,7 @@
             this.Controls.Add(this.btn_bs);
             this.Controls.Add(this.btn_kimbab);
             this.Controls.Add(this.btn_all);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.ex_image);
             this.Controls.Add(this.text_order_price);
             this.Controls.Add(this.btn_minus);
             this.Controls.Add(this.btn_plus);
@@ -273,7 +284,7 @@
         private System.Windows.Forms.Button btn_plus;
         private System.Windows.Forms.Button btn_minus;
         private System.Windows.Forms.Label text_order_price;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel ex_image;
         private System.Windows.Forms.Button btn_all;
         private System.Windows.Forms.Button btn_kimbab;
         private System.Windows.Forms.Button btn_bs;
