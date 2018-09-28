@@ -10,12 +10,19 @@ using System.Windows.Forms;
 
 namespace Mr.KimRice
 {
+
     public partial class Form1 : Form
     {
+        public int table_count;
+        public String table_info = "";
+        public delegate void TextEventHandler(string text);
+        public event TextEventHandler WriteTextEvent;
+
         public Form1()
         {
             InitializeComponent();
             Table_Set();
+            
         }
 
         private void Table_Set()
@@ -30,11 +37,13 @@ namespace Mr.KimRice
 
                 table_list1.Controls.Add(newbtn);
             }
+
+            table_list1.Controls[table_count].Text += table_info;
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            
+           
         }
 
         private void Button_Click(object sender, EventArgs e) 

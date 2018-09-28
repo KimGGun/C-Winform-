@@ -92,6 +92,7 @@
             this.btn_order.TabIndex = 3;
             this.btn_order.Text = "주문";
             this.btn_order.UseVisualStyleBackColor = true;
+            this.btn_order.Click += new System.EventHandler(this.btn_order_Click);
             // 
             // btn_cancel
             // 
