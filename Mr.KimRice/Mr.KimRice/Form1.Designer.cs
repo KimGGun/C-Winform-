@@ -37,6 +37,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("나눔스퀘어 Bold", 20F, System.Drawing.FontStyle.Bold);
+            this.label2.ForeColor = System.Drawing.Color.Black;
             this.label2.Location = new System.Drawing.Point(81, 9);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(63, 30);
@@ -65,6 +66,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.DimGray;
             this.ClientSize = new System.Drawing.Size(986, 563);
             this.Controls.Add(this.table_list1);
             this.Controls.Add(this.label2);

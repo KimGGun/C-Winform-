@@ -16,5 +16,12 @@ namespace Mr.KimRice
         {
             InitializeComponent();
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+            Form1 newForm1 = new Form1();
+            this.Hide();
+            newForm1.Show();
+        }
     }
 }

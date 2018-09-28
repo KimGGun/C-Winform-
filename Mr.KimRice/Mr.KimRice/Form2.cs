@@ -77,6 +77,7 @@ namespace Mr.KimRice
             }
         }
 
+        //주문 목록 초기화
         private void Set_orderlist()
         {
             order_list.View = View.Details;
@@ -87,6 +88,7 @@ namespace Mr.KimRice
             order_list.Columns.Add("가격", 90, HorizontalAlignment.Center);
         }
 
+        //메뉴 객체 초기화
         private void Food_init()
         {
             menu 불고기김밥 = new menu("불고기김밥", "kimbab", 2999, "boolkim");
@@ -192,6 +194,7 @@ namespace Mr.KimRice
             new_Form1.Show();
         }
 
+        // 메뉴를 클릭했을 때
         private void menu_click(object sender, EventArgs e)
         {
             Button btn = sender as Button;
@@ -205,6 +208,7 @@ namespace Mr.KimRice
                 }
             }
 
+            //미리보기 이미지 변경
             ex_image.BackgroundImage = btn.BackgroundImage;
             ex_image.BackgroundImage = new Bitmap(ex_image.BackgroundImage, new Size(490, 235));
 
@@ -216,6 +220,7 @@ namespace Mr.KimRice
             Set_orderPrice();
         }
 
+        //주문 추가
         private void add_order(int index)
         {
             ListViewItem newOrder = new ListViewItem(all_food[index].name);
@@ -247,12 +252,15 @@ namespace Mr.KimRice
         private void btn_cancel_Click(object sender, EventArgs e)
         {
             var item_idx = order_list.SelectedIndices;
+            
 
             // index 기준 삭제 : 역순으로 삭제 해야 함
             for(int i = item_idx.Count - 1; i >= 0; i--)
-            {
+            {  
                 order_list.Items[i].Remove();
             }
+           
+            
 
             Set_orderPrice();
         }
@@ -269,11 +277,6 @@ namespace Mr.KimRice
             }
 
             Set_orderPrice();
-        }
-
-        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void btn_plus_Click(object sender, EventArgs e)
