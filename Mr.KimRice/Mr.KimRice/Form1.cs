@@ -13,8 +13,16 @@ namespace Mr.KimRice
 
     public partial class Form1 : Form
     {
-        public int table_count;
-        public String table_info = "";
+        public int table_count
+        {
+            get;
+            set;
+        }
+        public String table_info
+        {
+            get;
+            set;
+        }
         
 
         public Form1()
