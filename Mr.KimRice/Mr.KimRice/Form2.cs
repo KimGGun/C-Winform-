@@ -15,6 +15,7 @@ namespace Mr.KimRice
     
     public partial class Form2 : Form
     {
+        Form form1;
         public int t_id;
         public int order_price;
         public int menu_int =0;
@@ -26,6 +27,12 @@ namespace Mr.KimRice
         public Form2()
         {
             InitializeComponent();
+        }
+
+        public Form2(Form _form)
+        {
+            InitializeComponent();
+            form1 = _form;
         }
 
         private void Form2_Load(object sender, EventArgs e)
@@ -406,13 +413,16 @@ namespace Mr.KimRice
 
         private void btn_order_Click(object sender, EventArgs e)
         {
-            new_Form1.table_count = t_id;
+            /*form1.table_count = t_id;
             for(int i = 0; i  < order_list.Controls.Count; i++)
             {
-                new_Form1.table_info += order_list.Items[i].Text + " X " + order_list.Items[i].SubItems[1].Text + "\n";
-            }
+                if(form1 != null)
+                {
+                    form1.table_info += order_list.Items[i].Text + " X " + order_list.Items[i].SubItems[1].Text + "\n";
+                }
+            }*/
             this.Hide();
-            new_Form1.Show();
+            form1.Show();
         }
     }
 }

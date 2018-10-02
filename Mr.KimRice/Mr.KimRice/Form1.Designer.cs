@@ -31,6 +31,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.table_list1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.cur_time = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label2
@@ -62,12 +63,24 @@
             this.table_list1.Size = new System.Drawing.Size(950, 499);
             this.table_list1.TabIndex = 2;
             // 
+            // cur_time
+            // 
+            this.cur_time.AutoSize = true;
+            this.cur_time.Font = new System.Drawing.Font("나눔스퀘어 ExtraBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.cur_time.Location = new System.Drawing.Point(174, 13);
+            this.cur_time.Name = "cur_time";
+            this.cur_time.Size = new System.Drawing.Size(39, 18);
+            this.cur_time.TabIndex = 3;
+            this.cur_time.Text = "test";
+            this.cur_time.Click += new System.EventHandler(this.label3_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DimGray;
             this.ClientSize = new System.Drawing.Size(986, 563);
+            this.Controls.Add(this.cur_time);
             this.Controls.Add(this.table_list1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -83,6 +96,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.FlowLayoutPanel table_list1;
+        private System.Windows.Forms.Label cur_time;
     }
 }
 

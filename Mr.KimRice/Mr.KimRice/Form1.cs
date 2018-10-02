@@ -15,14 +15,11 @@ namespace Mr.KimRice
     {
         public int table_count;
         public String table_info = "";
-        public delegate void TextEventHandler(string text);
-        public event TextEventHandler WriteTextEvent;
+        
 
         public Form1()
         {
             InitializeComponent();
-            Table_Set();
-            
         }
 
         private void Table_Set()
@@ -34,6 +31,7 @@ namespace Mr.KimRice
                 newbtn.Width = 180;
                 newbtn.Height = 180;
                 newbtn.Click += Button_Click;
+                
 
                 table_list1.Controls.Add(newbtn);
             }
@@ -43,14 +41,15 @@ namespace Mr.KimRice
 
         private void Form1_Load(object sender, EventArgs e)
         {
-           
+            Table_Set();
+            cur_time.Text = DateTime.Now.ToString("yyyy년 MM월 dd일 hh시 mm분");
         }
 
         private void Button_Click(object sender, EventArgs e) 
         {
             Button table_count = sender as Button;
             int new_t_id = Int32.Parse(table_count.Text);
-            Form2 newForm2 = new Form2();
+            Form2 newForm2 = new Form2(this);
             newForm2.t_id = new_t_id;
             this.Hide();
             newForm2.Show();
@@ -61,6 +60,11 @@ namespace Mr.KimRice
             this.Hide();
             Form3 Form3 = new Form3();
             Form3.Show();
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
