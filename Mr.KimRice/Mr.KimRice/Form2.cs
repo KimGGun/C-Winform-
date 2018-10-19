@@ -260,17 +260,12 @@ namespace Mr.KimRice
         // 주문 취소 버튼
         private void btn_cancel_Click(object sender, EventArgs e)
         {
-            var item_idx = order_list.SelectedIndices;
-            
+            var item_idx = order_list.FocusedItem;
+
 
             // index 기준 삭제 : 역순으로 삭제 해야 함
-            for(int i = item_idx.Count - 1; i >= 0; i--)
-            {  
-                order_list.Items[i].Remove();
-            }
-           
-            
-
+            item_idx.Remove();
+ 
             Set_orderPrice();
         }
 
@@ -290,46 +285,51 @@ namespace Mr.KimRice
 
         private void btn_plus_Click(object sender, EventArgs e)
         {
-            var selected_idx = order_list.SelectedIndices;
-            for(int i = selected_idx.Count - 1; i >= 0 ; i--)
+            var selected_idx = order_list.FocusedItem;
+            for(int i = 0 ; i < order_list.Items.Count ; i++)
             {
-                int new_ea = Int32.Parse(order_list.Items[i].SubItems[1].Text);
-                int now_price = Int32.Parse(order_list.Items[i].SubItems[2].Text);
-                int ori_price = now_price / new_ea;
-                int new_price;
-                new_ea++;
-                new_price = new_ea * ori_price;
+                if(selected_idx == order_list.Items[i])
+                {
+                    int new_ea = Int32.Parse(order_list.Items[i].SubItems[1].Text);
+                    int now_price = Int32.Parse(order_list.Items[i].SubItems[2].Text);
+                    int ori_price = now_price / new_ea;
+                    int new_price;
+                    new_ea++;
+                    new_price = new_ea * ori_price;
 
-                order_list.Items[i].SubItems[1].Text = new_ea.ToString("G");
-                order_list.Items[i].SubItems[2].Text = new_price.ToString("G");
+                    order_list.Items[i].SubItems[1].Text = new_ea.ToString("G");
+                    order_list.Items[i].SubItems[2].Text = new_price.ToString("G");
 
-                Set_orderPrice();
+                    Set_orderPrice();
+                }
             }
         }
 
         private void btn_minus_Click(object sender, EventArgs e)
         {
-            var selected_idx = order_list.SelectedIndices;
-            for (int i = selected_idx.Count - 1; i >= 0; i--)
+            var selected_idx = order_list.FocusedItem;
+            for (int i = 0; i < order_list.Items.Count; i++)
             {
-                
-                int new_ea = Int32.Parse(order_list.Items[i].SubItems[1].Text);
-                int now_price = Int32.Parse(order_list.Items[i].SubItems[2].Text);
-                if(new_ea == 1)
+                if(selected_idx == order_list.Items[i])
                 {
-                    order_list.Items[i].Remove();
+                    int new_ea = Int32.Parse(order_list.Items[i].SubItems[1].Text);
+                    int now_price = Int32.Parse(order_list.Items[i].SubItems[2].Text);
+                    if (new_ea == 1)
+                    {
+                        order_list.Items[i].Remove();
+                        Set_orderPrice();
+                        return;
+                    }
+                    int ori_price = now_price / new_ea;
+                    int new_price;
+                    new_ea--;
+                    new_price = new_ea * ori_price;
+
+                    order_list.Items[i].SubItems[1].Text = new_ea.ToString("G");
+                    order_list.Items[i].SubItems[2].Text = new_price.ToString("G");
+
                     Set_orderPrice();
-                    return;
                 }
-                int ori_price = now_price / new_ea;
-                int new_price;
-                new_ea--;
-                new_price = new_ea * ori_price;
-
-                order_list.Items[i].SubItems[1].Text = new_ea.ToString("G");
-                order_list.Items[i].SubItems[2].Text = new_price.ToString("G");
-
-                Set_orderPrice();
             }
         }
 
