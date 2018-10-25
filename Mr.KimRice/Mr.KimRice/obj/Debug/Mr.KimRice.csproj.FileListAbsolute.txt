@@ -24,3 +24,8 @@ C:\Users\Gun\source\repos\Winform-Kimbab\Mr.KimRice\Mr.KimRice\obj\Debug\Mr.KimR
 C:\Users\Gun\source\repos\Winform-Kimbab\Mr.KimRice\Mr.KimRice\bin\Debug\Mr.KimRice.exe.config
 C:\Users\Gun\source\repos\Winform-Kimbab\Mr.KimRice\Mr.KimRice\bin\Debug\Mr.KimRice.exe
 C:\Users\Gun\source\repos\Winform-Kimbab\Mr.KimRice\Mr.KimRice\bin\Debug\Mr.KimRice.pdb
+C:\Users\Gun\source\repos\Winform-Kimbab\Mr.KimRice\Mr.KimRice\obj\Debug\Mr.KimRice.Count.resources
+C:\Users\Gun\source\repos\Winform-Kimbab\Mr.KimRice\Mr.KimRice\obj\Debug\Mr.KimRice.Main.resources
+C:\Users\Gun\source\repos\Winform-Kimbab\Mr.KimRice\Mr.KimRice\obj\Debug\Mr.KimRice.Order.resources
+C:\Users\Gun\source\repos\Winform-Kimbab\Mr.KimRice\Mr.KimRice\obj\Debug\Mr.KimRice.Stats.resources
+C:\Users\Gun\source\repos\Winform-Kimbab\Mr.KimRice\Mr.KimRice\obj\Debug\Mr.KimRice.Loding.resources
